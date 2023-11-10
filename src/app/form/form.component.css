@@ -1,0 +1,23 @@
+.formdiv{
+    height: 28rem;
+    width: 30rem;
+    background-color: coral;
+    padding: 40px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    left: 30rem;
+    top: 5rem;
+}
+.row1{
+   display: flex;
+
+}
+.row1 .mb-3{
+    margin: 20px;
+}
+button{
+    margin: 10px;
+}

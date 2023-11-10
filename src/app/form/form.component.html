@@ -1,0 +1,77 @@
+<div class="formdiv">
+    <form [formGroup]="formData" (ngSubmit)="storeData()">
+        <div class="row1">
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                    [ngClass]="{'is-invalid':f['firstname'].errors}">Firstname</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Firstname"
+                    formControlName="firstname">
+                <div *ngIf="f['firstname'].errors " class="invalid-feedback">
+                    <div *ngIf="f['firstname'].errors['required']">
+                        please give firstname
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                    [ngClass]="{'is-invalid':f['email'].errors}">Email</label>
+                <input type="email" class="form-control" id="exampleInputPassword1" placeholder="secondname"
+                    formControlName="email">
+                <div *ngIf="f['email'].errors" class="invalid-feedback">
+                    <div *ngIf="f['email'].errors['required']">please give email</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row1">
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" ng
+                    [ngClass]="{'is-invalid':f['number'].errors}">Phone num</label>
+                <input type="number" class="form-control" placeholder="Number" formControlName="number">
+                <div *ngIf="f['number'].errors" class="invalid-feedback">
+                    <div *ngIf="f['number'].errors['required']">
+                        please give number
+
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label" [ngClass]="{'is-invalid':f['address'].errors}">Address</label>
+                <input type="text" class="form-control" placeholder="address" formControlName="address">
+                <div *ngIf="f['address'].errors" class="invalid-feedback">
+                    <div *ngIf="f['address'].errors['required']">
+                        Please give em the address
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row1">
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" [ngClass]="{'is-invalid':f['date'].errors}">Date</label>
+                <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    formControlName="date">
+                    <div *ngIf="f['date'].errors" class="invalid-feedback">
+                        <div *ngIf="f['date'].errors['required']">
+                            Please give date of joining
+                        </div>
+                    </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Course</label>
+                <br>
+                <select name="" id="" class="dropdown" formControlName="course">
+                    <option [value]="value" *ngFor="let value of course">{{value}}</option>
+                </select>
+            </div>
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" *ngIf="!id">Submit</button>
+        <button type="submit" class="btn btn-success" *ngIf="id" (click)="updateData()">Update</button>
+    </form>
+</div>

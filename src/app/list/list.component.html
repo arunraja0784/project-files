@@ -1,0 +1,31 @@
+<table class="table">
+    <thead>
+      <tr  class="table-dark">
+        <th scope="col">#</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col">Date</th>
+        <th scope="col">Course</th>
+        <th scope="col">Modify</th>
+        <th scope="col">Modify</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  class="table-primary" *ngFor="let values of  studentsData|paginate:{itemsPerPage:2,currentPage:pagination,totalItems:allUsers} ,index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{values.firstname}}</td>
+        <td>{{values.email}}</td>
+        <td>{{values.address}}</td>
+        <td>{{values.date}}</td>
+        <td>{{values.course}}</td>
+        <td><button class="btn btn-danger" (click)="removeData(values.id)">Delete</button></td>
+        <td><button class="btn btn-primary" routerLink="form/{{values.id}}">Edit</button></td>
+      </tr>
+     
+    </tbody>
+  </table>
+  <div>
+<pagination-controls (pageChange)="renderPage($event)">
+</pagination-controls>
+  </div>

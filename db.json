@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "firstname": "selva",
+      "email": "selva@gmail.com",
+      "number": 987654321,
+      "address": "Airport",
+      "date": "2023-11-07",
+      "course": "Nodejs",
+      "id": 7
+    },
+    {
+      "firstname": "arun",
+      "email": "arun@gmail.com",
+      "number": 987654321,
+      "address": "otp",
+      "date": "2023-11-30",
+      "course": "Phython",
+      "id": 8
+    },
+    {
+      "firstname": "vijay",
+      "email": "vijay@gmail.com",
+      "number": 1234567543,
+      "address": "melur",
+      "date": "2023-11-21",
+      "course": "Phython",
+      "id": 9
+    },
+    {
+      "firstname": "deva",
+      "email": "dev@gmail.com",
+      "number": 123434567,
+      "address": "mumbai",
+      "date": "2023-11-15",
+      "course": "Java",
+      "id": 10
+    },
+    {
+      "firstname": "rohit",
+      "email": "rohit@gmail.com",
+      "number": 23456745,
+      "address": "mumbai",
+      "date": "2023-11-23",
+      "course": "Nodejs",
+      "id": 11
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
